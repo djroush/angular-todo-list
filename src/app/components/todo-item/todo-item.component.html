@@ -1,0 +1,10 @@
+<div class="todo-item" (mouseenter)="showCloseButton = true" (mouseleave)="showCloseButton = false">
+	<input type="checkbox" class="todo-list" [(ngModel)]="completed">
+	<input type="hidden" [attr.value]="index" >
+	<span [class.strikeout]="completed">
+		{{ text }}
+	</span>
+	<span *ngIf="showCloseButton && !completed" (click)="removeItem(this)">
+        <a href="#">x</a>
+    </span>
+<div>

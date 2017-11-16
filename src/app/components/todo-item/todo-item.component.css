@@ -1,0 +1,9 @@
+.todo-item {
+	display: block;
+	font-size: 30px;
+	padding: 10px 20px 10px 20px;
+}
+
+.strikeout {
+	text-decoration: line-through;
+}
