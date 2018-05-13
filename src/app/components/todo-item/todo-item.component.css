@@ -4,6 +4,11 @@
 	padding: 10px 20px 10px 20px;
 }
 
+.todo-list {
+	width:20px;
+	height: 20px;
+}
+
 .strikeout {
 	text-decoration: line-through;
 }

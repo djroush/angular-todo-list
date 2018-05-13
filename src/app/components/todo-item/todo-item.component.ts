@@ -9,8 +9,8 @@ import { Todo } from '../../models/todo';
 })
 export class TodoItemComponent implements OnInit {
   @Input() text: string;
-  @Input() completed: boolean;
-  //Fixme: index will always be null because this value is available in todo-input
+  @Input() completed: boolean = false;
+  @Input() isMouseOver: boolean = false;
   @Input() id: number;
 
   constructor(private service: TodoService) { }
@@ -20,7 +20,8 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() {}
 
   public showCloseButton(): boolean {
-  	return this.completed;
+    console.log("in show close button");
+  	return this.isMouseOver;
   }
 
   public removeItem(): void {
